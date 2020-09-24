@@ -1,0 +1,170 @@
+
+*
+{
+    margin:0;
+    padding:0;
+}
+body
+{
+    overflow:hidden;
+}
+.container0
+{
+    height:100vh;
+    min-height:700px;
+    width:100%;
+    min-width: 768px;
+    background: url("./IMG/BACKGROUND.jpg") no-repeat center fixed;
+    background-size: cover;
+    background:#ffffff22;
+    position:relative;
+    z-index: -1;
+}
+#hello
+{
+    width:100%;
+    position: absolute;
+    top:10%;
+    text-align: center;
+    font-size:2rem;
+   
+}
+#score
+{
+    height:100px;
+    width:130px;
+    background:none;
+    position: absolute;
+    top:7%;
+    right:5%;
+    font-size:3rem;
+    text-align: center;
+    z-index: 2;
+}   
+.gameover
+{
+    height:60vh;
+    width:60%;
+    background:none;
+    position:absolute;
+    top:20vh;
+    left:20%;
+    display:none;
+    z-index:3;
+    color:#000;
+    text-align:center;
+    font-size: 7rem;
+    padding:10vh 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+.gameover>a
+{
+   display:block;
+   width:50%;
+   margin:auto;
+   text-decoration: none;
+   font-size:2rem;
+   padding: .2rem 0;
+   color:#000;
+}
+
+
+
+
+.player
+{
+    height:200px;
+    width:250px;
+    background: url("./IMG/PLAYER.PNG") no-repeat center scroll;
+    background-size: contain;
+    position:absolute;
+    bottom:110px;
+    left:25px;
+    z-index:-1;
+    transition: left 0.3s ease; 
+}
+.obstacle
+{   
+    height:200px;
+    width:250px;
+    background: url("./IMG/obstacle1.PNG") no-repeat center scroll;
+    background-size: contain;
+    position:absolute;
+    bottom:110px;
+    right:5%;
+    z-index: -1;
+}
+
+.ground
+{
+    height:150px;
+    width:100%;
+    background: url("./IMG/ground.png");
+    position: absolute;
+    bottom:0;
+    left:0;
+    z-index:-2;
+}
+
+.way
+{
+    height:150px;
+    width:100%;
+    background:#fffFFF00;
+    position: absolute;
+    bottom:0;
+    z-index:-3;
+}
+
+
+.animatePlayerJump
+{
+    animation: animateplayerJump 1400ms ease-in-out;
+}
+
+@keyframes animateplayerJump 
+{
+    0%
+    {
+        bottom:110px;
+    }
+    
+    50%
+    {
+        bottom:370px;      
+    }
+    
+    100%
+    {
+        bottom:110px;
+    }
+    
+    
+}
+
+.obstacleCatch
+{
+    animation: obstacleCatch 3000ms linear infinite;   
+}
+
+@keyframes obstacleCatch
+{
+    0%
+    {
+        right:-1000px;
+    }
+   
+    100%
+    {
+        right:2000px;
+    }
+
+}
+
+
+.animatePlayerRight 
+{
+    transition: position 0.2s linear;
+}
+
